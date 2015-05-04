@@ -2,9 +2,9 @@ module.exports = function () {
     var app = require("./controllers.js"),
         $ = require("jQuery"),
         Backbone = require("Backbone"),
-        owlCarousel = require("../../vendor/owl-carousel/owl.carousel.js");
-
-    return Backbone.View({
+        owlCarousel = require("owlCarousel");
+    Backbone.$ = $;
+    return Backbone.View.extend({
         el: ".settings",
 
         events: {

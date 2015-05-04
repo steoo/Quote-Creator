@@ -1,0 +1,32 @@
+{
+  "name": "public",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD",
+  "browser": {
+    "owlCarousel": "./vendor/owl-carousel/owl-carousel/owl.carousel.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "owlCarousel": {
+      "exports": "owlCarousel",
+      "depends": ["jquery:jQuery"]
+    }
+  },
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "browserify": "~10.1.0",
+    "browserify-shim": "~3.8.6",
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3"
+  }
+}

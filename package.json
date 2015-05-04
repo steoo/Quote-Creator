@@ -1,0 +1,24 @@
+{
+  "name": "quote-creator-official",
+  "version": "1.0.0",
+  "description": "Tool to create quotes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "quote",
+    "canvas"
+  ],
+  "author": "Stefano Imparato",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~4.12.3",
+    "consolidate": "~0.12.1",
+    "handlebars": "~3.0.3",
+    "body-parser": "~1.12.3",
+    "multer": "~0.1.8",
+    "shortid": "~2.2.2",
+    "backbone": "~1.1.2"
+  }
+}

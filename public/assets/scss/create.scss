@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'Cabin';
+  src: url("Cabin-Regular.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url("Cabin-Medium.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url("Cabin-MediumItalic.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 500;
+  font-style: italic;
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+}
+
+$base-dimensions: (
+        width: 540px,
+        height: 540px
+);
+$brand-signature-dim: (
+        width: 200px,
+        height: 30px
+);
+$brand-logo-dim: 64px;
+body {
+  font-family: 'Cabin', sans-serif;
+}
+
+hr {
+  border: 1px solid #eeeeee;
+  width: 300px;
+  margin: 25px auto;
+}
+
+html, button, input, select, textarea,
+.pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: "Cabin", sans-serif;
+  letter-spacing: normal;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.preview, .settings {
+  margin-top: 10px;
+}
+
+.quote-standard {
+  position: relative;
+  width: map-get($base-dimensions, width);
+  height: map-get($base-dimensions, height);
+  background-size: cover;
+  padding: 30px;
+  border: 1px solid #d3d3d3;
+  .inner-container {
+    position: relative;
+    border: 4px solid lightgray;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 100%;
+    #brand-squared-logo {
+      margin: 30px auto;
+      width: $brand-logo-dim;
+      height: $brand-logo-dim;
+      background: {
+        image: url("../img/logo64x64.jpg");
+      }
+    ;
+    }
+    #quote-text, #quote-owner {
+      letter-spacing: normal;
+      text-align: center;
+      font-style: italic;
+      color: white;
+      text-shadow: 1px 1px 3px #333333;
+      &.placeholder {
+        color: lightgray !important;
+        text-shadow: 0 0 0 !important;
+        &:after {
+          content: attr(data-placeholder);
+        }
+      }
+      &.white {
+        color: white;
+        text-shadow: 1px 1px 3px #333333;
+      }
+      &.gray {
+        color: lightgray;
+        text-shadow: 1px 1px 3px #333333;
+      }
+    }
+    #quote-text {
+      padding: 20px 80px;
+      font-size: 36px;
+      font-weight: 500;
+    }
+    #quote-owner {
+      padding: 10px 20px;
+      text-align: right;
+      font-size: 30px;
+    }
+//    #brand-signature {
+//      position: absolute;
+//      left: 50%;
+//      bottom: 10px;
+//      width: map-get($brand-signature-dim, width);
+//      height: map-get($brand-signature-dim, height);
+//      margin-left: - (map-get($brand-signature-dim, width)/2);
+//      border: 1px solid lightgray;
+//    }
+  }
+}
+.settings {
+  text-align: center;
+}
+
+.carousel-img {
+  img {
+    cursor: pointer;
+    width: 250px;
+    height: 250px;
+  }
+}
+.palette{
+  width: 300px;
+  height: 35px;
+  margin: 0 auto;
+  > div {
+    cursor: pointer;
+  }
+  .white, .gray {
+    border: 1px solid #999999;
+    width: 35px;
+    height: inherit;
+    display: inline-block;
+  }
+  .white {
+    background: white;
+    margin-right: 10px;
+  }
+  .gray {
+    background: lightgray;
+  }
+}

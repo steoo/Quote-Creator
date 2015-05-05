@@ -1,3 +1,3 @@
 var settingsView = require("./settingsView.js");
 
-new settingsView();
+var a = new settingsView();

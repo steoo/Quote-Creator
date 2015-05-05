@@ -1,4 +1,4 @@
-module.exports = function () {
+module.exports = (function () {
     var app = require("./controllers.js"),
         $ = require("jQuery"),
         Backbone = require("Backbone"),
@@ -42,4 +42,4 @@ module.exports = function () {
         }
 
     })
-}
+})()

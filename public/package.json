@@ -10,7 +10,8 @@
   "license": "BSD",
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js",
-    "owlCarousel": "./vendor/owl-carousel/owl-carousel/owl.carousel.js"
+    "owlCarousel": "./vendor/owl-carousel/owl-carousel/owl.carousel.js",
+    "CanvasTextWrapper": "./vendor/canvas-text-wrapper/CanvasTextWrapper.js"
   },
   "browserify": {
     "transform": [
@@ -22,6 +23,9 @@
     "owlCarousel": {
       "exports": "$.fn.owlCarousel",
       "depends": ["jquery:$"]
+    },
+    "CanvasTextWrapper": {
+      "exports": "CanvasTextWrapper"
     }
   },
   "dependencies": {

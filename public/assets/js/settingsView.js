@@ -2,8 +2,9 @@ var app = require("./controllers.js"),
     $ = require("jQuery"),
     Backbone = require("Backbone"),
     owlCarousel = require("owlCarousel");
-Backbone.$ = $;
-$.fn.owlCarousel = owlCarousel;
+
+    Backbone.$ = $;
+    $.fn.owlCarousel = owlCarousel;
 module.exports = Backbone.View.extend({
     el: ".settings",
 

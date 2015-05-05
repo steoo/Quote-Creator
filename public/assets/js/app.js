@@ -1,6 +1,6 @@
 var $ = require("jquery");
 $(function () {
-    var settingsView = require("./settingsView.js");
+    var appView = require("./appView.js");
 
-    new settingsView().initCarousel();
+    new appView();
 })

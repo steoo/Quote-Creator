@@ -86,6 +86,7 @@ html, button, input, select, textarea,
       font-style: italic;
       color: white;
       text-shadow: 1px 1px 3px #333333;
+      cursor: text;
       &.placeholder {
         color: lightgray !important;
         text-shadow: 0 0 0 !important;
@@ -154,4 +155,10 @@ html, button, input, select, textarea,
   .gray {
     background: lightgray;
   }
+}
+.result {
+  text-align: center;
+}
+.create {
+margin-top: 10px;
 }

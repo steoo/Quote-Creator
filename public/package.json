@@ -9,6 +9,7 @@
   "author": "",
   "license": "BSD",
   "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
     "owlCarousel": "./vendor/owl-carousel/owl-carousel/owl.carousel.js"
   },
   "browserify": {
@@ -17,9 +18,10 @@
     ]
   },
   "browserify-shim": {
+    "jquery": "$",
     "owlCarousel": {
-      "exports": "owlCarousel",
-      "depends": ["jquery:jQuery"]
+      "exports": "$.fn.owlCarousel",
+      "depends": ["jquery:$"]
     }
   },
   "dependencies": {

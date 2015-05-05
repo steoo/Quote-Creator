@@ -1,45 +1,44 @@
-module.exports = (function () {
-    var app = require("./controllers.js"),
-        $ = require("jQuery"),
-        Backbone = require("Backbone"),
-        owlCarousel = require("owlCarousel");
-    Backbone.$ = $;
-    return Backbone.View.extend({
-        el: ".settings",
+var app = require("./controllers.js"),
+    $ = require("jQuery"),
+    Backbone = require("Backbone"),
+    owlCarousel = require("owlCarousel");
+Backbone.$ = $;
+$.fn.owlCarousel = owlCarousel;
+module.exports = Backbone.View.extend({
+    el: ".settings",
 
-        events: {
-            "click .carousel-img": "setBackground",
-            "click .palette div": "setTextColor"
-        },
+    events: {
+        "click .carousel-img": "setBackground",
+        "click .palette div": "setTextColor"
+    },
 
-        options: {
-            singleItem: true,
-            pagination: false,
-            navigation : true,
-            mouseDrag: false
-        },
+    options: {
+        singleItem: true,
+        pagination: false,
+        navigation: true,
+        mouseDrag: false
+    },
 
-        initialize: function () {
-            this.initCarousel();
-        },
+    initialize: function () {
+        //this.initCarousel();
+    },
 
-        initCarousel : function () {
-            this.owlCarousel = this.$el.find(".carousel").owlCarousel(this.options);
-        },
+    initCarousel: function () {
+        this.owlCarousel = this.$el.find(".carousel").owlCarousel(this.options);
+    },
 
-        setBackground: function (e) {
-            var $target = $(e.target),
-                src = $target.attr("src");
+    setBackground: function (e) {
+        var $target = $(e.target),
+            src = $target.attr("src");
 
-            app.Channel.trigger("select:background", src);
-        },
+        app.Channel.trigger("select:background", src);
+    },
 
-        setTextColor: function (e) {
-            var $target = $(e.target),
-                className = $target.attr("class");
+    setTextColor: function (e) {
+        var $target = $(e.target),
+            className = $target.attr("class");
 
-            app.Channel.trigger("select:textcolor", className);
-        }
+        app.Channel.trigger("select:textcolor", className);
+    }
 
-    })
-})()
+})

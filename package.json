@@ -13,10 +13,12 @@
   "author": "Stefano Imparato",
   "license": "BSD",
   "dependencies": {
-    "express": "~4.12.3",
-    "consolidate": "~0.12.1",
-    "handlebars": "~3.0.3",
+    "backbone": "~1.1.2",
     "body-parser": "~1.12.3",
+    "consolidate": "~0.12.1",
+    "express": "~4.12.3",
+    "handlebars": "~3.0.3",
+    "mongoose": "^4.0.2",
     "multer": "~0.1.8",
     "shortid": "~2.2.2"
   }

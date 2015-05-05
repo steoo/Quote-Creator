@@ -1,3 +1,6 @@
-var settingsView = require("./settingsView.js");
+var $ = require("jquery");
+$(function () {
+    var settingsView = require("./settingsView.js");
 
-var a = new settingsView();
+    new settingsView().initCarousel();
+})

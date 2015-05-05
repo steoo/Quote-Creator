@@ -81,7 +81,7 @@ module.exports = Backbone.View.extend({
             new CanvasTextWrapper(that.$el.find("canvas")[0], text, options)
             new CanvasTextWrapper(that.$el.find("canvas")[0], author, options_author)
             drawRect();
-            that.eventEmitter.trigger("save", )
+            that.eventEmitter.trigger("save", "save:canvas");
         }
 
         function drawRect(){

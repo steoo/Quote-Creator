@@ -1,0 +1,43 @@
+body {
+  background-color: #EC7357;
+  font-family: 'Lato', sans-serif;
+}
+
+#logo {
+  width: 500px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+#logo img {
+  width: 100%;
+}
+
+.container {
+  width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.block {
+  width: 550px;
+  margin: 50px auto;
+}
+
+.block h1, h2, p, li {
+  color: white;
+  line-height: 25px;
+}
+
+.block ul {
+  list-style: none;
+  text-align: left;
+}
+
+.block ul li {
+  font-size: 20px;
+}
+
+.block p {
+  font-size: 20px;
+}

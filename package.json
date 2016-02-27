@@ -1,0 +1,38 @@
+{
+  "name": "quote-creator",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD",
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "owlCarousel": "./vendor/owl-carousel/owl-carousel/owl.carousel.js",
+    "CanvasTextWrapper": "./vendor/canvas-text-wrapper/CanvasTextWrapper.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "owlCarousel": {
+      "exports": "$.fn.owlCarousel",
+      "depends": ["jquery:$"]
+    },
+    "CanvasTextWrapper": {
+      "exports": "CanvasTextWrapper"
+    }
+  },
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "browserify": "~10.1.0",
+    "browserify-shim": "~3.8.6",
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3"
+  }
+}

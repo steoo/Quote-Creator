@@ -19,7 +19,7 @@
 <body>
 <header>
     <div id="logo">
-        <img src="/assets/img/logo.png" alt="quote creator logo"/>
+        <img src="./assets/img/logo.png" alt="quote creator logo"/>
     </div>
 </header>
 <div class="container">
@@ -42,6 +42,41 @@
     </div>
 
 </div>
+<div class="pure-g">
+    <div class="pure-u-1-2 preview">
+        <div id="quote" class="quote-standard">
+            <div class="inner-container">
+                <div id="brand-squared-logo"></div>
+                <div id="quote-text" class="placeholder white" contenteditable data-placeholder="Type a quote here"></div>
+                <div id="quote-owner" class="placeholder white" contenteditable
+                     data-placeholder="Type the author"></div>
+                <!-- <div id="brand-ext-logo"></div> -->
+            </div>
+            <!-- <img id="background-image" src="" alt=""/>-->
+        </div>
+    </div>
+    <div class="pure-u-1-2 settings">
+        <h2>Choose a Background Image</h2>
+        <div class="carousel">
+            <div class="carousel-img"><img src="assets/img/photo-1.jpg" alt=""/></div>
+            <div class="carousel-img"><img src="assets/img/photo-2.jpg" alt=""/></div>
+            <div class="carousel-img"><img src="assets/img/photo-3.jpg" alt=""/></div>
+            <div class="carousel-img"><img src="assets/img/photo-4.jpg" alt=""/></div>
+        </div>
+        <hr/>
+        <h2>Change text color</h2>
+        <div class="palette">
+            <div class="white"></div>
+            <div class="gray"></div>
+        </div>
+        <button class="create pure-button pure-button-primary">Create Quote</button>
+    </div>
+</div>
+<div class="result">
+    <h1>Here it goes!</h1>
+    <canvas width="600" height="600"></canvas>
 
+</div>
+<script src="dist/app.js"></script>
 </body>
 </html>

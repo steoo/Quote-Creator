@@ -1,0 +1,27 @@
+{
+  "name": "canvas-text-wrapper",
+  "version": "0.3.2",
+  "ignore": [
+    "**/.*",
+    "**/*.log",
+    "**/*.json",
+    "Gruntfile.js",
+    "examples",
+    "node_modules",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/namniak/CanvasTextWrapper.git"
+  },
+  "homepage": "http://namniak.github.io/CanvasTextWrapper/",
+  "_release": "0.3.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.3.2",
+    "commit": "9515466c5dcc9afcfaea4aa5300c2dee6982db4c"
+  },
+  "_source": "git://github.com/namniak/CanvasTextWrapper.git",
+  "_target": "~0.3.0",
+  "_originalSource": "canvas-text-wrapper"
+}

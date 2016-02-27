@@ -19,13 +19,10 @@
   font-style: italic;
 }
 
-body {
-  font-family: "Cabin", sans-serif;
-}
-
 $base-dimensions: (width: 540px, height: 540px);
-$brand-signature-dim: (width: 200px,height: 30px);
+$brand-signature-dim: (width: 200px, height: 30px);
 $brand-logo-dim: 64px;
+
 body {
   font-family: 'Cabin', sans-serif;
 }
@@ -58,23 +55,23 @@ html, button, input, select, textarea,
   background-size: cover;
   padding: 30px;
   border: 1px solid #d3d3d3;
-  .inner-container {
+  margin: 0 50px;
+  @at-root .inner-container {
     position: relative;
     border: 4px solid lightgray;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     height: 100%;
-    #brand-squared-logo {
+    @at-root #brand-squared-logo {
       margin: 30px auto;
       width: $brand-logo-dim;
       height: $brand-logo-dim;
       background: {
         image: url("../img/logo64x64.jpg");
       }
-    ;
     }
-    #quote-text, #quote-owner {
+    @at-root #quote-text, #quote-owner {
       letter-spacing: normal;
       text-align: center;
       font-style: italic;
@@ -96,6 +93,9 @@ html, button, input, select, textarea,
         color: lightgray;
         text-shadow: 1px 1px 3px #333333;
       }
+      &:focus{
+        background-color: #eee;
+      }
     }
     #quote-text {
       padding: 20px 80px;
@@ -107,17 +107,18 @@ html, button, input, select, textarea,
       text-align: right;
       font-size: 30px;
     }
-//    #brand-signature {
-//      position: absolute;
-//      left: 50%;
-//      bottom: 10px;
-//      width: map-get($brand-signature-dim, width);
-//      height: map-get($brand-signature-dim, height);
-//      margin-left: - (map-get($brand-signature-dim, width)/2);
-//      border: 1px solid lightgray;
-//    }
+    //    #brand-signature {
+    //      position: absolute;
+    //      left: 50%;
+    //      bottom: 10px;
+    //      width: map-get($brand-signature-dim, width);
+    //      height: map-get($brand-signature-dim, height);
+    //      margin-left: - (map-get($brand-signature-dim, width)/2);
+    //      border: 1px solid lightgray;
+    //    }
   }
 }
+
 .settings {
   text-align: center;
 }
@@ -129,7 +130,8 @@ html, button, input, select, textarea,
     height: 250px;
   }
 }
-.palette{
+
+.palette {
   width: 300px;
   height: 35px;
   margin: 0 auto;
@@ -150,9 +152,11 @@ html, button, input, select, textarea,
     background: lightgray;
   }
 }
+
 .result {
   text-align: center;
 }
+
 .create {
-margin-top: 10px;
+  margin-top: 10px;
 }

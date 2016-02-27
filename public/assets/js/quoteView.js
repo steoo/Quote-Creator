@@ -40,7 +40,7 @@ module.exports = Backbone.View.extend({
         }
     },
     onKeyUp: function(e){
-        var id = $(e.target).attr("id")
+        var id = $(e.target).attr("id");
         var text = $(e.target).text();
         var which = id === "quote-text" ? "quote_text" : "quote_owner";
         //app.timer.delay(self.model.set, [which, text], this.model);
@@ -50,4 +50,4 @@ module.exports = Backbone.View.extend({
     onChangeBackground: function (model, src) {
         this.$el.css("background-image", "url("+src+")");
     }
-})
+});

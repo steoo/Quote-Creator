@@ -13,7 +13,7 @@ module.exports = (function () {
         "background_image": String, // Riferimento dell'immagine di background, salvo perché non si sà mai
         "src": String, // Reale immagine della citazione,
         "color": String //colore delle stringhe
-    })
+    });
 
     var Quote = mongoose.model('Quote', quoteSchema);
 

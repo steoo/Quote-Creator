@@ -5,4 +5,4 @@ module.exports = (function () {
     return {
         Channel: _.extend({}, Backbone.Events)
     }
-})()
+})();

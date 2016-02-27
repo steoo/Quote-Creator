@@ -33,56 +33,57 @@ module.exports = Backbone.View.extend({
             text = this.quoteView.$el.find("#quote-text").text().trim(),
             author = this.quoteView.$el.find("#quote-owner").text().trim();
         if(!text){
-            alert("Sembra non ci sia nessun testo");
+            alert("Text missing");
             return false;
         }
         if(!author){
-            alert("Sembra non ci sia nessun autore");
+            alert("Author missing");
             return false;
         }
         img.src = this.quoteView.model.get("background_image");
 
         if(!img.src){
-            alert("Sembra tu non abbia scelto un background")
+            alert("There is no background");
             return false;
         }
 
-        options = {
+        var options = {
             "font": 'italic 500 36px Cabin',
             "textAlign": "center",
             "lineHeight": "40px",
             "verticalAlign": "middle",
             "paddingX": 100,
             "paddingY": 80
-        }
-        options_author = {
+        };
+
+        var options_author = {
             "font": 'italic 500 30px Cabin',
             "textAlign": "right",
             "lineHeight": "40px",
             "verticalAlign": "bottom",
             "paddingX": 50,
             "paddingY": 80
-        }
+        };
         ctx.shadowOffsetX = 1;
         ctx.shadowOffsetY = 1;
         ctx.shadowBlur = 2;
         ctx.shadowColor = "#333333";
-        ctx.fillStyle = "#ffffff"
+        ctx.fillStyle = "#ffffff";
 
         brandLogo.onload = function () {
             var dim = 64;
             ctx.drawImage(brandLogo, 300-32, 60, dim, dim);
-        }
+        };
 
         img.onload = function () {
             var dim = 600;
             ctx.drawImage(img, 0, 0, dim, dim);
             brandLogo.src = that.quoteView.model.get("brand_logo");
-            new CanvasTextWrapper(that.$el.find("canvas")[0], text, options)
-            new CanvasTextWrapper(that.$el.find("canvas")[0], author, options_author)
+            new CanvasTextWrapper(that.$el.find("canvas")[0], text, options);
+            new CanvasTextWrapper(that.$el.find("canvas")[0], author, options_author);
             drawRect();
             that.eventEmitter.trigger("save", "save:canvas");
-        }
+        };
 
         function drawRect(){
             ctx.rect(30, 30, 540, 540);
@@ -95,7 +96,5 @@ module.exports = Backbone.View.extend({
         }
     }
 
-
-
-})
+});
 
